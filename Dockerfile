@@ -15,6 +15,8 @@ RUN \
 RUN \
   pip install ktbs
 
+RUN apt-get install curl -y && apt-get clean
+
 EXPOSE 8001
-ENTRYPOINT ktbs --host-name=0.0.0.0
+# ENTRYPOINT ktbs --host-name=0.0.0.0
 
